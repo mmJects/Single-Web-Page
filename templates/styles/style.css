@@ -1,0 +1,301 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Koulen';
+    font-family: 'Roboto Condensed';
+    font-family: 'Akshar', sans-serif;
+}
+
+/* banner */
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(../images/bagan_viewpoint.jpg);
+    background-position: center;
+    position:relative;
+    background-size: cover;
+}
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width: 100px;
+  height: auto;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+list-style: none;
+display: inline-block;
+padding: 8px 12px;
+position: relative;
+
+}
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 19px;
+
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after{
+    width: 100%;
+
+}
+.text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size: 60px;
+
+}
+.text-box p{
+    margin: 25px 0 50px;
+    font-size: 17px;
+    color: #fff;
+}
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    font-size: 15px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    padding: 12px 34px;
+}
+.hero-btn:hover{
+    border:1px solid cadetblue;
+    background: cadetblue;
+    transition:1s
+}
+nav .material-symbols-outlined{
+    display: none;
+}
+@media(max-width : 700px){
+    .text-box h1{
+        font-size: 20px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: absolute;
+        background: cadetblue;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    nav .material-symbols-outlined{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-links ul {
+        padding: 30px;
+    }
+}
+
+/* card borders */
+.bdr{
+    border-radius: 25px 25px 0px 0px;
+    height: 350px;
+}
+
+/* header hover flag effect */
+.flag-head{
+    color:#ffd700;
+    font-size: 40px;
+    padding: 40px 40px;
+    background: url("../images/flag1.png");
+    background-position: center;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+
+/* carousel with images */
+
+.caro-img{
+    height: 500px;
+    width: 1000px;
+    border-radius: 25px;
+}
+@media(max-width:700px){
+   .caro-img{ 
+    height: 350px;
+    width: 450px;
+    }
+}
+
+/* This is not my idea . Credits to https://codepen.io/lchap701 */
+.custom-text{
+	margin: auto;
+	letter-spacing: 0.0015em;
+    color: rgb(153, 77, 77);
+	font-size: 3rem;
+	text-shadow: 0 1px #ffd700, -1px 0 #ffd700, -1px 2px #ffd700, -2px 1px #ffd700,
+		-2px 3px #ffd700, -3px 2px #ffd700, -3px 4px #ffd700, -4px 3px #ffd700,
+		-4px 5px #ffd700, -5px 4px #ffd700, -5px 6px #ffd700, -6px 5px #ffd700;
+	text-align: center;
+}
+
+/* custom */
+.custom-text-3d{
+    color: #fff;
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: Helvetica;
+  text-shadow: 
+    0 1px 0 #ccc, 
+    0 2px 0 #c9c9c9, 
+    0 3px 0 #bbb, 
+    0 4px 0 #b9b9b9, 
+    0 5px 0 #aaa, 
+    0 6px 1px rgba(0,0,0,.1), 
+    0 0 5px rgba(0,0,0,.1), 
+    0 1px 3px rgba(0,0,0,.3), 
+    0 3px 5px rgba(0,0,0,.2), 
+    0 5px 10px rgba(0,0,0,.25), 
+    0 10px 10px rgba(0,0,0,.2), 
+    0 20px 20px rgba(0,0,0,.15);
+}
+
+
+
+/* call to action */
+.cta{
+    /* margin: 100px auto; */
+    margin-left: 150px;
+    width: 80%;
+    background-image: linear-gradient(rgba(160, 139, 139, 0.7),rgba(145, 134, 134, 0.7)),url(../images/bagan_sunset.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    padding: 100px 0;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.cta h2{
+    color:#fff;
+    margin-bottom: 40px;
+    padding: 0;
+    font-size: 30px;
+}
+@media(max-width){
+    .cta h2{
+        font-size: 24px;
+    }
+}
+
+
+/* enjoy */
+/* one block for enjoy */
+.enjoy{
+    border-radius: 25px;
+    display: flex;
+    height: 80vh;
+    margin-top: 0px;
+    margin-left: 170px;
+    margin-right: 170px;
+    margin-bottom: 20px;
+    background-image: url("../images/bagan_viewpoint.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+.bottom-right {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+    background: rgba(0, 0, 0, 0.75);
+    padding: 4px 8px;
+    color: white;
+    margin: 0;
+    font: 40px Sans-Serif;
+}
+
+@media(max-width:700px){
+    .enjoy{
+        margin: 0px 20px;
+        height: 50vh;
+    }
+}
+
+/* two block for enjoy */
+.second-enjoy{
+    display: flex;
+    height: 90vh;
+    margin-top: 0px;
+    margin-left: 170px;
+    margin-right: 170px;
+}
+.parent{
+    position: relative;
+    width: 100%;
+}
+.one,.two{
+    position: absolute;
+    height: 80vh;
+    width: 65%;
+}
+.one{
+    left: 0;
+    top: 0;
+    -webkit-clip-path: polygon(0 0, 100% 0%, 50% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0%, 50% 100%, 0% 100%); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right; 
+    border-radius: 25px 0px 0px 25px;
+  }
+  .two {
+    right: 0;
+    top: 0;
+    -webkit-clip-path: polygon(50% 0, 100% 0%, 100% 100%, 0% 100%);
+    clip-path: polygon(50% 0, 100% 0%, 100% 100%, 0% 100%); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:left;
+    border-radius: 0px 25px 25px 0px;
+}
+@media(max-width:700px){
+    .second-enjoy{
+        margin: 30px 20px;
+        height: 600px;
+    }
+}
